@@ -29,8 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Used Commands
 
-ng generate module customers --route customers --module app.module
-ng generate module customers/customers-list --route customers/customers-list --module customers/customers.module
+Run `ng generate module customers --route customers --module app.module`
+Run `ng generate module customers/customers-list --route customers/customers-list --module customers/customers.module`
 
-ng generate module orders --route orders --module app.module
-ng generate module orders/orders-list --route orders/orders-list --module orders/orders.module
+Run `ng generate module orders --route orders --module app.module`
+Run `ng generate module orders/orders-list --route orders/orders-list --module orders/orders.module`
