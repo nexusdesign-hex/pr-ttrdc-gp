@@ -1,111 +1,173 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-gray-800">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!--
-              Icon when menu is closed.
-  
-              Heroicon name: outline/menu
-  
-              Menu open: "hidden", Menu closed: "block"
-            -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!--
-              Icon when menu is open.
-  
-              Heroicon name: outline/x
-  
-              Menu open: "block", Menu closed: "hidden"
-            -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center">
-            <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
-            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">
-          </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-  
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
-  
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-  
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-            <span class="sr-only">View notifications</span>
-            <!-- Heroicon name: outline/bell -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-          </button>
-  
-          <!-- Profile dropdown -->
-          <div class="ml-3 relative">
-            <div>
-              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-              </button>
-            </div>
-  
-            <!--
-              Dropdown menu, show/hide based on menu state.
-  
-              Entering: "transition ease-out duration-100"
-                From: "transform opacity-0 scale-95"
-                To: "transform opacity-100 scale-100"
-              Leaving: "transition ease-in duration-75"
-                From: "transform opacity-100 scale-100"
-                To: "transform opacity-0 scale-95"
-            -->
-            <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-      </div>
-    </div>
-  </nav>
-<h1 class="text-3xl font-bold underline bg-rose-900 text-pink-200 ">
-    {{title}}
-</h1>
 
-<div class="bg-white dark:bg-black">
-    ksjdhfkjsdfkjsdhkjf
+<div class="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
+    <div class="flex flex-col items-center justify-center">
+        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg1.svg" alt="logo">
+
+        <div class="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-16">
+
+            <div class="mt-8 text-4xl font-extrabold tracking-tight leading-tight">Sign in</div>
+            <div class="flex items-baseline mt-0.5 font-medium">
+                <div>Don't have an account?</div>
+                <a
+                    class="ml-1 text-primary-500 hover:underline"
+                    [routerLink]="['/sign-up']">Sign up
+                </a>
+            </div>
+
+
+            <form
+                class="mt-8"
+                #signInNgForm="ngForm">
+     
+                <!-- Email field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Email address</mat-label>
+                    <input
+                        id="email"
+                        matInput
+                        [formControlName]="'email'">
+                    <!-- <mat-error *ngIf="signInForm.get('email').hasError('required')">
+                        Email address is required
+                    </mat-error>
+                    <mat-error *ngIf="signInForm.get('email').hasError('email')">
+                        Please enter a valid email address
+                    </mat-error> -->
+                </mat-form-field>
+
+                <!-- Password field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Password</mat-label>
+                    <input
+                        id="password"
+                        matInput
+                        type="password"
+                        [formControlName]="'password'"
+                        #passwordField>
+                    <button
+                        mat-icon-button
+                        type="button"
+                        (click)="passwordField.type === 'password' ? passwordField.type = 'text' : passwordField.type = 'password'"
+                        matSuffix>
+                        <mat-icon
+                            class="icon-size-5"
+                            *ngIf="passwordField.type === 'password'">visibility</mat-icon>
+                        <mat-icon
+                            class="icon-size-5"
+                            *ngIf="passwordField.type === 'text'">visibility_off</mat-icon>
+                    </button>
+                    <mat-error>
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+                
+        
+                <!-- Actions -->
+                <div class="inline-flex items-end justify-between w-full mt-1.5">
+                    <mat-checkbox
+                        class="color-primary"
+                        [formControlName]="'rememberMe'">
+                        Remember me
+                    </mat-checkbox>
+                    <a
+                        class="text-md font-medium text-primary-500 hover:underline"
+                        [routerLink]="['/forgot-password']">Forgot password?
+                    </a>
+                </div>
+        
+                <button type="submit" class="
+                    w-full
+                    block
+                    bg-blue-700
+                    hover:bg-blue-600
+                    focus:bg-blue-600
+                    text-white
+                    font-semibold
+                    rounded-lg
+                    px-4
+                    py-3
+                    mt-6
+                    ">
+                    Log In
+                </button>
+            </form>
+
+
+            <!-- Separator -->
+            <div class="flex items-center py-4">
+                <div class="flex-auto mt-px border-t"></div>
+                <div class="mx-2 text-gray-400">Or continue with</div>
+                <div class="flex-auto mt-px border-t"></div>
+            </div>
+
+            <!-- <button type="button" class="
+                w-full
+                block
+                bg-white
+                hover:bg-slate-100
+                focus:bg-slate-100
+                text-slate-700
+                font-semibold
+                rounded-lg
+                px-4
+                py-3
+                border-2 border-slate-200
+                ">
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6"
+                        viewBox="0 0 48 48">
+                        <defs>
+                        <path id="a"
+                            d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                        </defs>
+                        <clipPath id="b">
+                        <use xlink:href="#a" overflow="visible" />
+                        </clipPath>
+                        <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                        <path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                        <path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                        <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                    </svg>
+                    <span class="ml-4"> Log in with Google</span>
+                </div>
+            </button> -->
+
+            <!-- Single sign-on buttons -->
+            <div class="flex items-center mt-8 space-x-4">
+                <button
+                    class="flex-auto"
+                    type="button"
+                    mat-stroked-button>
+                    <mat-icon
+                        class="icon-size-5"
+                        [svgIcon]="'feather:facebook'"></mat-icon>
+                </button>
+                <button
+                    class="flex-auto"
+                    type="button"
+                    mat-stroked-button>
+                    <mat-icon
+                        class="icon-size-5"
+                        [svgIcon]="'feather:twitter'"></mat-icon>
+                </button>
+                <button
+                    class="flex-auto"
+                    type="button"
+                    mat-stroked-button>
+                    <mat-icon
+                        class="icon-size-5"
+                        [svgIcon]="'feather:github'"></mat-icon>
+                </button>
+            </div>
+            
+            <div class="mt-4 text-slate-500">
+                Need an account? <a href="#" class="text-blue-500 hover:text-blue-700">Create an account</a>
+            </div>
+            
+        </div>
+    </div>
 </div>
+
+
 
 <button type="button" routerLink="/customers">Customers</button>
 <button type="button" routerLink="/orders">Orders</button>
